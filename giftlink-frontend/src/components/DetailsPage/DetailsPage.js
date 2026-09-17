@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-
-import { urlConfig } from "../../config";
 import "./DetailsPage.css";
+import { urlConfig } from "../../config";
 
 function DetailsPage() {
   const navigate = useNavigate();
@@ -22,10 +21,8 @@ function DetailsPage() {
     const fetchGift = async () => {
       try {
         // Task 2: Fetch gift details
-        const response = await fetch(
-          `${urlConfig.backendUrl}/api/gifts/${productId}`,
-        );
-
+        const url = `${urlConfig.backendUrl}/api/gifts/${productId}`;
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -41,8 +38,8 @@ function DetailsPage() {
     fetchGift();
 
     // Task 3: Scroll to top on component mount
-    window.scroll(0, 0);
-  }, [productId]);
+    window.scrollTo(0, 0);
+  }, [productId, navigate]);
 
   const handleBackClick = () => {
     // Task 4: Handle back click
@@ -91,7 +88,6 @@ function DetailsPage() {
           <div className="image-placeholder-large">
             {gift.image ? (
               // Task 5: Display gift image
-
               <img
                 src={gift.image}
                 alt={gift.name}
@@ -104,7 +100,7 @@ function DetailsPage() {
           {/* Task 6: Display gift details */}
           <p>
             <strong>Category:</strong>
-            {gift.name}
+            {gift.category}
           </p>
           <p>
             <strong>Condition:</strong>
@@ -112,11 +108,11 @@ function DetailsPage() {
           </p>
           <p>
             <strong>Date Added:</strong>
-            {gift.date_added}
+            {gift.dateAdded}
           </p>
           <p>
             <strong>Age (Years):</strong>
-            {gift.age_years}
+            {gift.age}
           </p>
           <p>
             <strong>Description:</strong>
@@ -126,8 +122,7 @@ function DetailsPage() {
       </div>
       <div className="comments-section mt-4">
         <h3 className="mb-3">Comments</h3>
-        {/* Task 7: Render comments section by using the map function to go */}
-        through all the comments
+        {/* Task 7: Render comments section */}
         {comments.map((comment, index) => (
           <div key={index} className="card mb-3">
             <div className="card-body">
