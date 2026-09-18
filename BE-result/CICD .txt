@@ -1,0 +1,24 @@
+
+PS C:\Users\ACER\Documents\training\BE-training\fullstack-capstone-project> gh run view 35315322401 --verbose
+
+✓ main CI/CD · 35315322401
+Triggered via push about 14 minutes ago
+
+JOBS
+✓ Lint JavaScript Files in 14s (ID 105505613036)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Install JSHint
+  ✓ Run Linter
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job
+✓ Build client in 1m14s (ID 105505613169)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Run build
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job

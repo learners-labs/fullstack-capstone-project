@@ -1,0 +1,15 @@
+curl --location 'http://localhost:3060/api/gifts/424'
+{
+    "_id": "6aab9a1bb89e420a873c4683",
+    "id": "424",
+    "name": "Dining Table",
+    "category": "Kitchen",
+    "condition": "New",
+    "posted_by": "23789",
+    "zipcode": "94102",
+    "date_added": 1684195200,
+    "age_days": 800,
+    "age_years": 2.19,
+    "description": "This dining table has been the centerpiece of many family gatherings...",
+    "image": "/images/dining-table.jpeg"
+}
