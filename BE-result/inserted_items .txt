@@ -1,0 +1,7 @@
+PS C:\Users\ACER\Documents\training\BE-training\fullstack-capstone-project\giftlink-backend\util\import-mongo> npm start
+
+> import-mongo@1.0.0 start
+> node index.js
+
+Connected successfully to server
+Gifts already exists in DB
